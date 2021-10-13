@@ -23,7 +23,7 @@ class Person {
   }
 
   sayHi() {
-    return "No";
+    return "Hello";
   }
 }
 
