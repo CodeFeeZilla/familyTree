@@ -22,9 +22,7 @@ class Person {
     return this.parents.map((parent) => parent.name).join(" & ") || "unknown";
   }
 
-  sayHi() {
-    return "Hello";
-  }
+  sayHi = () => "Hello";
 }
 
 const kingGeorge = new Person(names.kingGeorge, []);
