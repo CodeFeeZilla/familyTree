@@ -21,6 +21,10 @@ class Person {
   childOf() {
     return this.parents.map((parent) => parent.name).join(" & ") || "unknown";
   }
+
+  sayHi() {
+    return "No";
+  }
 }
 
 const kingGeorge = new Person(names.kingGeorge, []);
