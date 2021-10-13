@@ -1,4 +1,4 @@
-const { expect, test } = require("@jest/globals");
+const { test, expect } = require("@jest/globals");
 const { royalFamilyTree, Person } = require("./familyTreeClass");
 
 describe("Royal Family Tree Object and Person Class Tests", () => {
@@ -50,7 +50,32 @@ describe("Royal Family Tree Object and Person Class Tests", () => {
     expect(royalFamilyTree.firstGeneration[1].childOf()).toBe("unknown");
   });
 
-  test("Test Driven Development Cycle (TDD) example: Red, Green, Refactor.", () => {
+  test.skip("Test Driven Development Cycle (TDD) example: Red, Green, Refactor.", () => {
     expect(royalFamilyTree.firstGeneration[0].sayHi()).toBe("Hello");
+  });
+
+  //trying expect.objectContaining method
+  test.skip("Matches if the object contains the expected key: value pairs", () => {
+    expect(royalFamilyTree.firstGeneration[0]).toEqual(
+      expect.objectContaining({
+        name: "King George VI",
+        parents: [],
+      })
+    );
+  });
+
+  //trying expect.not.objectContaining method
+  test.skip("Matches if the object does not contains the expected key: value pairs", () => {
+    expect(royalFamilyTree.firstGeneration[0]).toEqual(
+      expect.not.objectContaining({
+        name: "Chris",
+        parents: [],
+      })
+    );
+  });
+
+  //trying to expect().toHaveProperty method
+  test("This Royal has the correct name", () => {
+    expect(royalFamilyTree.firstGeneration[0]).toHaveProperty("name", "chris");
   });
 });
