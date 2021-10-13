@@ -104,3 +104,93 @@ const generation = [generationOne, generationTwo, generationThree];
 //   };
 
 console.log(generation[2].diana.childOf());
+
+// const names = {
+//   kingGeorge: "King George VI",
+//   elizabeth: "Queen Elizabeth, The Queen Mother",
+//   philip: "Prince Philip, Duke of Edinburgh",
+//   elizabethII: "Queen Elizabeth II",
+//   margaret: "Princess Margaret, Countess of Snowdon",
+//   camila: "Camila, Duchess of Cornwall",
+//   charles: "Charles, Prince of Wales",
+//   diana: "Diana, Princess of Wales",
+//   anne: "Anne, Princess Royal",
+//   andrew: "Prince Andrew, Duke of York",
+//   edward: "Prince Edward, Earl of Wessex",
+// };
+
+// const childOf = function () {
+//   return this.parents.map((parent) => parent.name).join(" & ") || "unkown";
+// };
+
+// const filterName = (generations, nametoFilterOut) => {
+//   return generations.filter(
+//     (generation) => !nametoFilterOut.includes(generation.name)
+//   );
+// };
+
+// const generationOne = [
+//   {
+//     name: names.kingGeorge,
+//     parents: [],
+//     childOf: childOf,
+//   },
+//   {
+//     name: names.elizabeth,
+//     parents: [],
+//     childOf: childOf,
+//   },
+// ];
+
+// const generationTwo = [
+//   {
+//     name: names.philip,
+//     parents: [],
+//     childOf: childOf,
+//   },
+//   {
+//     name: names.elizabethII,
+//     parents: generationOne,
+//     childOf: childOf,
+//   },
+//   {
+//     name: names.margaret,
+//     parents: generationOne,
+//     childOf: childOf,
+//   },
+// ];
+
+// const generationThree = [
+//   {
+//     name: names.camila,
+//     parents: [],
+//     childOf: childOf,
+//   },
+//   {
+//     name: names.charles,
+//     parents: filterName(generationTwo, [names.margaret]),
+//     childOf: childOf,
+//   },
+//   {
+//     name: names.diana,
+//     parents: [],
+//     childOf: childOf,
+//   },
+//   {
+//     name: names.anne,
+//     parents: filterName(generationTwo, [names.margaret]),
+//     childOf: childOf,
+//   },
+//   {
+//     name: names.andrew,
+//     parents: filterName(generationTwo, [names.margaret]),
+//     childOf: childOf,
+//   },
+//   {
+//     name: names.edward,
+//     parents: filterName(generationTwo, [names.margaret]),
+//     childOf: childOf,
+//   },
+// ];
+
+// console.log(generationThree[1].childOf());
