@@ -1,4 +1,4 @@
-const { expect } = require("@jest/globals");
+const { expect, test } = require("@jest/globals");
 const { royalFamilyTree, Person } = require("./familyTreeClass");
 
 describe("Royal Family Tree Object and Person Class Tests", () => {
@@ -18,7 +18,7 @@ describe("Royal Family Tree Object and Person Class Tests", () => {
     expect(typeof royalFamilyTree).toBe("object");
   });
 
-  test("Testing third generation childOf methods returning expected parents", () => {
+  test.skip("Testing third generation childOf methods returning expected parents", () => {
     expect(royalFamilyTree.thirdGeneration[0].childOf()).toBe("unknown");
     expect(royalFamilyTree.thirdGeneration[1].childOf()).toBe(
       "Prince Philip, Duke of Edinburgh & Queen Elizabeth II"
@@ -35,7 +35,7 @@ describe("Royal Family Tree Object and Person Class Tests", () => {
     );
   });
 
-  test("Testing second generation childOf methods returning expected parents", () => {
+  test.skip("Testing second generation childOf methods returning expected parents", () => {
     expect(royalFamilyTree.secondGeneration[0].childOf()).toBe("unknown");
     expect(royalFamilyTree.secondGeneration[1].childOf()).toBe(
       "King George VI & Queen Elizabeth, The Queen Mother"
@@ -45,8 +45,12 @@ describe("Royal Family Tree Object and Person Class Tests", () => {
     );
   });
 
-  test("Testing first generation childOf methods returning expected parents", () => {
+  test.skip("Testing first generation childOf methods returning expected parents", () => {
     expect(royalFamilyTree.firstGeneration[0].childOf()).toBe("unknown");
     expect(royalFamilyTree.firstGeneration[1].childOf()).toBe("unknown");
+  });
+
+  test("Test Driven Development Cycle (TDD) example: Red, Green, Refactor.", () => {
+    expect(royalFamilyTree.firstGeneration[0].sayHi()).toBe("Hello");
   });
 });
